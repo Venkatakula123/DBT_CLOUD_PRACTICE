@@ -1,0 +1,12 @@
+SELECT
+    A.CUSTOMER_ID,
+    A.CUSTOMER_NAME,
+    A.COUNTRY,
+    SUM(B.new_prices) AS TOTAL_AMOUNT
+FROM {{ ref('STG_CUST') }} A
+JOIN {{ ref('Stg_Orders') }} B
+    ON A.CUSTOMER_ID = B.CUSTOMER_ID
+GROUP BY
+    A.CUSTOMER_ID,
+    A.CUSTOMER_NAME,
+    A.COUNTRY

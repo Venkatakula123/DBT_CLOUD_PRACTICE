@@ -1,0 +1,9 @@
+SELECT
+    MOVIE_ID,
+    TITLE,
+    GENRES,
+    RELEASE_YEAR,
+    RATING,
+    UPDATED_AT
+FROM {{ ref('m8') }}
+WHERE MOVIE_ID IS NOT NULL

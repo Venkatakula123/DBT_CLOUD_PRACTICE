@@ -1,0 +1,23 @@
+version: 2
+
+sources:
+  - name: movies          
+    database: MOVIELENS             
+    schema: RAW        
+    tables:
+      - name: RAW_GENOME_SCORES
+      - name: RAW_GENOME_TAGS
+      - name: RAW_LINKS
+      - name: RAW_MOVIES
+      - name: RAW_RATINGS
+      - name: RAW_TAGS
+      - name: raw_movie_events
+      - name: raw_movie_release_dates
+      - name: raw_bonus
+      - name: raw_emp
+      - name: raw_dept
+      - name: raw_salgrade
+      - name: employees
+      - name: RAW_CUSTOMERS
+      - name: RAW_ORDERS
+      - name: RAW_FILMS
