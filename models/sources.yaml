@@ -21,3 +21,18 @@ sources:
       - name: RAW_CUSTOMERS
       - name: RAW_ORDERS
       - name: RAW_FILMS
+      - name: raw_cust
+      - name: ORDERS_STG
+        columns:
+          - name: order_id
+            tests:
+              - not_null
+          - name: updated_at
+            tests:
+              - not_null
+          - name: order_amount
+            tests:
+              - not_null
+          - name: customer_id
+            tests:
+              - not_null
